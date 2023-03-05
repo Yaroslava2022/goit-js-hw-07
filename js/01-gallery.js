@@ -18,17 +18,11 @@ description
   </div>`;
 
 
-
 const markup = galleryItems.map((el) => makeGalleryCard(el)).join('');
-
 
 const listEl = document.querySelector('.gallery');
 
 listEl.insertAdjacentHTML('afterbegin', markup);
-
-const galleryEl = document.querySelector('.gallery');
-
-
 
 
  function createBigImage(event) {
@@ -59,5 +53,5 @@ const galleryEl = document.querySelector('.gallery');
 
 };
 
-galleryEl.addEventListener('click', createBigImage);
+listEl.addEventListener('click', createBigImage);
 
